@@ -2,5 +2,6 @@
 	= link_to (image_tag post.image.url(:small))
 	%h2= link_to post.title, post
 	%p.comment_count= pluralize(post.comments.count, "comment")
+	%p= pluralize(post.get_upvotes.count, "like")
 
 = link_to "Add New Inspiration", new_post_path
